@@ -1,4 +1,4 @@
-class calculator {
+class calculator { // se inicializa la clase 'calculator'.
 
     constructor() {
         this.N1 = 0;
@@ -7,7 +7,7 @@ class calculator {
         this.D2 = 0;
         
     }
-    sum(N1, D1, N2, D2) {
+    sum(N1, D1, N2, D2) { // Establece los valores que recibe y retorna el producto decimal
         this.N1 = N1;
         this.D1 = D1;
         this.N2 = N2;
@@ -54,10 +54,10 @@ class calculator {
 
 }
 
-var mcd = function(a, b) {
-    if (b == 0) return a;                
+var mcd = function(a, b) { // Recibe a y b (numerador y denominador)
+    if (b == 0) return a;  // Si el denominador es igual a 0, entrega (a)
   
-    return mcd(b, Math.floor(a % b));          
+    return mcd(b, Math.floor(a % b)); // Entrega mcd de b y residuo. 
   };
 
 
@@ -66,10 +66,11 @@ const calc = new calculator ();
 //console.log(calc.rest(1, 2, 3, 4)); // Muestra el valor decimal de la operación entre fracciones
 //console.log(calc.mult(1, 2, 3, 4)); // Muestra el valor decimal de la operación entre fracciones
 //console.log(calc.div(1, 2, 3, 4)); // Muestra el valor decimal de la operación entre fracciones
+
 var suma = calc.sum(1, 2, 3, 4);
-var resta = calc.rest(1, 2, 3, 4);
+/*var resta = calc.rest(1, 2, 3, 4);
 var mult = calc.mult(2, 3, 6, 6);
-var div = calc.div(1, 2, 3, 4);
+var div = calc.div(1, 2, 3, 4);*/
 
 
 var len = suma.toString().length -2; // Calcula la longitud de la cadena después del punto
@@ -80,3 +81,4 @@ var divisor = mcd(numerador, denominador);
 numerador /= divisor;
 denominador /= divisor; 
 console.log((Math.floor(numerador) + '/' + Math.floor(denominador)));
+
